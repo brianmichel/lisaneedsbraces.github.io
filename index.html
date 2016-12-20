@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
+    <title>LISA NEEDS BRACES</title>
+  </head>
+  <body>
+    <main>
+      <div>
+        <center><h1 style="color:black;">LISA NEEDS BRACES</h1></center>
+        <center><img src="images/lnbdp.gif" alt="LISA NEEDS BRACES/DENTAL PLAN"></center>
+        <center><h1 style="color:white;">DENTAL PLAN</h1></center>
+      </div>
+    </main>
+    <audio id="dental-plan">
+      <source src="audio/dental-plan.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="lisa-needs-braces">
+      <source src="audio/lisa-needs-braces.mp3" type="audio/mpeg">
+    </audio>
+    <script type="text/javascript">
+      var dental_plan = document.getElementById("dental-plan");
+      var lisa_needs_braces = document.getElementById("lisa-needs-braces");
+
+      lisa_needs_braces.onended = function() {
+        document.title = "DENTAL PLAN";
+        document.body.style.backgroundColor = "black";
+        dental_plan.play();
+      };
+
+      dental_plan.onended = function() {
+        document.title = "LISA NEEDS BRACES";
+        document.body.style.backgroundColor = "white";
+        lisa_needs_braces.play();
+      };
+
+      lisa_needs_braces.play();
+    </script>
+  </body>
+</html>
