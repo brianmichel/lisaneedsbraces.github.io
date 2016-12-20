@@ -16,6 +16,7 @@
           </video>
         </center>
         <center><h1 style="color:white;">DENTAL PLAN</h1></center>
+        <center><input id="playback-speed" type="range" min="0.01" max="3.0" step="0.01"></center>
       </div>
     </main>
     <audio id="dental-plan">
@@ -27,6 +28,7 @@
     <script type="text/javascript">
       var dental_plan = document.getElementById("dental-plan");
       var lisa_needs_braces = document.getElementById("lisa-needs-braces");
+      var input = document.getElementById("playback-speed");
 
       lisa_needs_braces.onended = function() {
         document.title = "DENTAL PLAN";
@@ -41,6 +43,12 @@
       };
 
       lisa_needs_braces.play();
+
+      input.onchange = function(event) {
+        rate = event.srcElement.value;
+        dental_plan.playbackRate = rate;
+        lisa_needs_braces.playbackRate = rate;
+      };
     </script>
   </body>
 </html>
