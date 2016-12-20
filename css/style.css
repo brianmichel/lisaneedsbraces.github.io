@@ -1,12 +1,10 @@
 body {
   font-size: 150%;
   font-family: sans-serif;
-  padding: 20px;
 }
 
 main {
   margin: 0 auto;
-  padding: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -18,7 +16,7 @@ main div {
   overflow: auto;
 }
 
-img {
-  width: 90%;
-  height: 90%;
+video{
+  object-fit: initial;
+  width: 80%;
 }
